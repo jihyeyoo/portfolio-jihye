@@ -540,9 +540,9 @@ main {
   z-index: -1;
 }
 
-.service-icon-box { margin-bottom: 10px; }
+.service-icon-box { margin-bottom: 10px; flex-shrink: 0; }
 
-.service-icon-box img { margin: auto; }
+.service-icon-box img { margin: auto; width: 220px; height: 160px; border-radius: 8px; object-fit: cover; }
 
 .service-content-box { text-align: center; }
 
@@ -555,9 +555,66 @@ main {
   line-height: 1.6;
 }
 
+.pub-authors {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  margin-top: 6px;
+}
+
+.pub-venue {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  margin-top: 4px;
+}
+
+.pub-venue em {
+  font-style: italic;
+  font-weight: var(--fw-500);
+  color: var(--vegas-gold);
+}
+
+.pub-link {
+  color: inherit;
+  text-decoration: underline;
+}
+
+.about-photo-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-left: 6px;
+  padding: 5px 14px;
+  background: var(--border-gradient-onyx);
+  border-radius: 20px;
+  color: var(--vegas-gold);
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  text-decoration: none;
+  vertical-align: middle;
+  transition: opacity 0.2s;
+}
+
+.about-photo-link:hover { opacity: 0.8; }
+
+.about-photo-link ion-icon { font-size: 16px; }
+
+.pub-award {
+  color: white;
+  font-size: var(--fs-6);
+  font-weight: var(--fw-500);
+  margin-top: 4px;
+}
+
+.pub-status {
+  color: var(--light-gray);
+  font-size: var(--fs-6);
+  font-style: italic;
+  margin-top: 4px;
+}
+
 
 /**
- * #testimonials 
+ * #testimonials
  */
 
 .testimonials { margin-bottom: 30px; }
@@ -1395,7 +1452,7 @@ textarea.form-input::-webkit-resizer { display: none; }
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
-    gap: 18px;
+    gap: 28px;
     padding: 30px;
   }
 
@@ -1726,7 +1783,7 @@ textarea.form-input::-webkit-resizer { display: none; }
   /* service */
 
   .service-list {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 20px 25px;
   }
 
@@ -1803,7 +1860,7 @@ textarea.form-input::-webkit-resizer { display: none; }
    */
 
   main {
-    max-width: 1200px;
+    max-width: 1500px;
     margin-inline: auto;
     display: flex;
     justify-content: center;
