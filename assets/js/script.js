@@ -38,10 +38,10 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 
   testimonialsItem[i].addEventListener("click", function () {
 
-    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
-    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
-    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
-    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    if (modalImg) { modalImg.src = this.querySelector("[data-testimonials-avatar]").src; }
+    if (modalImg) { modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt; }
+    if (modalTitle) { modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML; }
+    if (modalText) { modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML; }
 
     testimonialsModalFunc();
 
@@ -50,8 +50,8 @@ for (let i = 0; i < testimonialsItem.length; i++) {
 }
 
 // add click event to modal close button
-modalCloseBtn.addEventListener("click", testimonialsModalFunc);
-overlay.addEventListener("click", testimonialsModalFunc);
+if (modalCloseBtn) { modalCloseBtn.addEventListener("click", testimonialsModalFunc); }
+if (overlay) { overlay.addEventListener("click", testimonialsModalFunc); }
 
 
 
