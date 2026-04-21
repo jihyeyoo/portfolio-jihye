@@ -575,6 +575,7 @@ main {
 }
 
 .pub-link {
+  display: inline;
   color: inherit;
   text-decoration: underline;
 }
@@ -1810,7 +1811,9 @@ textarea.form-input::-webkit-resizer { display: none; }
    * BLOG
    */
 
-  .blog-banner-box { height: 250px; }
+  .blog-posts-list { grid-template-columns: repeat(3, 1fr); }
+
+  .blog-banner-box { height: 170px; }
 
 }
 
